@@ -1,0 +1,20 @@
+.event-container {
+    color: white;
+}
+.event-title {
+    font-family: 'Sansita One', sans-serif;
+    font-size: 2rem;
+    color: #F56B9A;
+    font-weight: 500;
+    text-shadow: 1px 1px 0px #000000;
+    text-align: center;
+}
+
+.event-input {
+    background: #FFFFFF1A;
+    border: none;
+    height: 40px;
+    min-width: 310px;
+    border-radius: 0.25rem;
+
+}

@@ -3,6 +3,8 @@ import Homepage from './pages/Homepage/Homepage'
 import Eventpage from './pages/Eventpage/Eventpage'
 import Nav from './components/Nav'
 
+
+
 import {
   BrowserRouter as Router,
   Route,
@@ -14,19 +16,12 @@ import {
 function App() {
   return (
     <div className='mobile-wrapper'>
-      <BrowserRouter>
-      
-      
       <Routes>
-        
-          <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<Homepage />} />
           <Route path="/events" element={<Eventpage />} />
-         
-        </Routes>
-        
+         </Routes>
         < Nav/>
-      </BrowserRouter>
-    </div>
+      </div>
   )
 }
 
