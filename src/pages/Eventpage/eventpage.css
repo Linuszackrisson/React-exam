@@ -1,5 +1,13 @@
 .event-container {
     color: white;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
 }
 .event-title {
     font-family: 'Sansita One', sans-serif;
@@ -16,5 +24,98 @@
     height: 40px;
     min-width: 310px;
     border-radius: 0.25rem;
+
+}
+
+.event-card {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    max-height: 100px;
+    width: 100%;
+    padding: 1rem;
+    margin: auto;    
+    
+    
+    
+    
+  }
+  
+  .event__left,
+  .event__middle,
+  .event__right {
+    flex: 1;
+  }
+  
+ 
+  .event__right {
+    max-width: 66px;
+  }
+  
+  .event__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FFFFFF;
+    max-width: 66px; /* Minsta bredd */
+    height: 66px; 
+    
+    
+   
+    border-radius: 5%;
+    margin: auto;
+
+     
+  }
+
+  .event__left p {
+    margin: 8px 0;
+}
+
+    .event__name {
+    font-family: Fira Sans;
+    font-size: 22px;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-shadow: 1px 1px 0px 0px #F56B9A;
+    
+
+    
+
+    
+}
+.event__where {
+    font-family: Fira Sans;
+    font-size: 12px;
+    font-style: italic;
+    color: #FFFFFFCC;
+    
+    
+
+     
+}
+
+.event__middle {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.event__right {
+    text-align: left;
+}
+
+.event__middle p {
+   margin: 0;
+   text-align: left;
+   
+}
+
+.event__time {
+    font-family: Fira Sans;
+    font-size: 14px;
+    color: #D0D0D0;
+    
 
 }

@@ -29,10 +29,23 @@ export default function Eventpage() {
       </div>
       {
         events.map((event, index) => (
-          <article key={index}>
-            
-            <p>{event.where}</p>
-            <p>{event.when.date}</p>
+          <article className='event-card' key={index}>
+            <div className="event__left">
+            <p className='event__day'>{event.when.date.substring(0, 2)}</p>
+
+            <p className='event__month'>{event.when.date.substring(3)}</p>
+
+            </div>
+            <div className="event__middle">
+              <p className='event__name'>{event.name}</p>
+              <p className='event__where'>{event.where}</p>
+              <div className="event__time">
+                <p>{event.when.from} - {event.when.to}</p>
+              </div>
+            </div>
+            <div className="event__right">
+              <p>{event.price}</p>
+            </div>
           </article>
         ))
       }
