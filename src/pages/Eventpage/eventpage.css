@@ -96,7 +96,7 @@
     font-size: 22px;
     color: #FFFFFF;
     font-weight: 600;
-    text-shadow: 1px 1px 0px 0px #F56B9A;
+    text-shadow: 1px 1px 0px #F56B9A;    
     
 
     
@@ -117,7 +117,7 @@
 .event__middle {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 0.35rem;
     
     
 }
