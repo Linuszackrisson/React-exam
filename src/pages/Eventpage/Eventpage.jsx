@@ -39,13 +39,17 @@ export default function Eventpage() {
             <div className="event__middle">
               <p className='event__name'>{event.name}</p>
               <p className='event__where'>{event.where}</p>
+            <div className="event__bottom">
               <div className="event__time">
+
                 <p>{event.when.from} - {event.when.to}</p>
               </div>
+              <p className='event__price'>{event.price} sek</p>
             </div>
-            <div className="event__right">
-              <p>{event.price}</p>
-            </div>
+           
+              
+              </div>
+            
           </article>
         ))
       }
