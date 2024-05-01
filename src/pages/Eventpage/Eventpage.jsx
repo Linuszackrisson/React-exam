@@ -33,7 +33,7 @@ export default function Eventpage() {
             <div className="event__left">
             <p className='event__day'>{event.when.date.substring(0, 2)}</p>
 
-            <p className='event__month'>{event.when.date.substring(3)}</p>
+            <p className='event__month'>{event.when.date.substring(2, 6)}</p>
 
             </div>
             <div className="event__middle">
