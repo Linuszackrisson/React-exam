@@ -17,7 +17,7 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link to="/orders">
+          <Link to="/CartPage">
             <FaShoppingCart className='icon' /> 
           </Link>
         </li>

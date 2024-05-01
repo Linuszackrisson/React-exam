@@ -2,6 +2,8 @@ import React from 'react'
 import Homepage from './pages/Homepage/Homepage'
 import Eventpage from './pages/Eventpage/Eventpage'
 import Nav from './components/Nav'
+import EventDetails from './components/EventDetails'
+import Cartpage from './pages/Cartpage/Cartpage'
 
 
 
@@ -19,6 +21,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
           <Route path="/events" element={<Eventpage />} />
+          <Route path="/events/:eventId" element={<EventDetails />} /> 
+          <Route path="/cartpage" element={<Cartpage />} />
+
          </Routes>
         < Nav/>
       </div>

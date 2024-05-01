@@ -170,3 +170,16 @@
     text-transform: uppercase;
 
 }
+
+.event-link {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    max-height: 100px;
+    width: 80%;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin: auto;
+    text-decoration: none;
+    color: inherit;
+}
