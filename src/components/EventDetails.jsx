@@ -8,9 +8,10 @@ function EventDetails() {
   const { events } = useEventStore();
   const event = events[eventId];
   const [numberOfTickets, setNumberOfTickets] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(event.price); // Initialize total price with the price of one ticket
+  const [totalPrice, setTotalPrice] = useState(event.price); 
+  
 
-  // Uppdatera totalpriset när antalet biljetter ändras
+
   useEffect(() => {
     setTotalPrice(event.price * numberOfTickets);
   }, [numberOfTickets]);
@@ -29,18 +30,22 @@ function EventDetails() {
     <div className='Event-details'>
       <h1>Event</h1>
       <h3>You are about to score <br></br>some tickets to</h3>
+      <div className="Event-details__info">
       <h2>{event.name}</h2>
-      <p>{event.when.date} {event.when.from} - {event.when.to}</p>
-      <p>{event.where}</p>
-      
-       
+      <p className='Details-date'>{event.when.date} kl {event.when.from} - {event.when.to}</p>
+      <p className='Details-where'> @ {event.where}</p></div>
+
+      <div className="Event-details__buttons-container">
+      <p className='Event-details__total'>{totalPrice} SEK</p>
+       <div className="Event-details__buttons">
         <button onClick={removeTicket}>-</button>
-        {numberOfTickets}
-        <button onClick={addTicket}>+</button>
+        <p>{numberOfTickets}</p>
+        <button onClick={addTicket}>+</button></div>
+        </div>
       
-      <p>Totalt värde på order</p>
-      <p>{totalPrice} SEK</p>
-      <button className='addToCart'>Lägg till i varukorgen</button>
+      
+      
+       <button className='addToCart'>Lägg till i varukorgen</button>
     </div>
   );
 }
