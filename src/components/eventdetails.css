@@ -134,7 +134,8 @@
     font-size: 22px;
     font-weight: 600;
     color: rgba(255, 255, 255, 1);
-    padding: 1.3rem 6rem;
+    padding: 1.3rem;
+    width: 80%;
     border: none;
     margin-top: 4rem;
     border-radius: 3px;
