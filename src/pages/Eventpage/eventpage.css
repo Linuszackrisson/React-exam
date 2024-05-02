@@ -49,9 +49,9 @@
     gap: 2rem;
     align-items: center;
     max-height: 100px;
-    width: 80%;
+    width: 100%;
     padding-bottom: 1rem;
-    padding-top: 1rem;
+    
     margin: auto;    
     
     
@@ -177,8 +177,7 @@
     align-items: center;
     max-height: 100px;
     width: 80%;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    
     margin: auto;
     text-decoration: none;
     color: inherit;
