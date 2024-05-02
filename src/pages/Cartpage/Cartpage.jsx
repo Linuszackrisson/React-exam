@@ -1,12 +1,12 @@
 import React from 'react';
 import { useTicketStore } from '../../ticketStore'; // Importera ticketStore
 import { useOrderStore } from '../../orderStore'; // Importera orderStore
-import './cartpage.css'
+import './cartpage.css';
 
 function Cartpage() {
   // Vi hämtar varukorgen från vår customhook i ticketStore.js
-  const { cart, increaseTickets, decreaseTickets } = useTicketStore();
-  const { addOrder, clearOrders } = useOrderStore();
+  const { cart, increaseTickets, decreaseTickets, clearCart } = useTicketStore();
+  const { addOrder } = useOrderStore();
 
   // Beräkna det totala priset för alla biljetter
   const totalPris = cart.reduce((total, item) => total + (item.event.price * item.numberOfTickets), 0);
@@ -17,8 +17,8 @@ function Cartpage() {
       addOrder(item.event, item.numberOfTickets);
     });
 
-    
-    
+    // Töm varukorgen
+    clearCart();
   };
 
   return (
