@@ -23,10 +23,12 @@ export const useTicketStore = create((set) => ({
     const updatedCart = [...state.cart];
     if (updatedCart[index].numberOfTickets > 1) {
       updatedCart[index].numberOfTickets -= 1;
-      return { cart: updatedCart };
+    } else {
+      updatedCart.splice(index, 1);
     }
-    return state;
+    return { cart: updatedCart };
   }),
+  
   handleChangeTickets: (index, value) => set((state) => {
     const updatedCart = [...state.cart];
     updatedCart[index].numberOfTickets = value;
