@@ -1,7 +1,7 @@
 .event-container {
     color: white;
     width: 100%;
-    
+    min-height: 667px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,6 +24,7 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 2rem;
+    
 }
 .event-title {
     font-family: 'Sansita One', sans-serif;
