@@ -43,6 +43,7 @@
     align-items: center;
     width: 100%;
     min-height: 667px;
+    justify-content: space-between;
     
 }
 
@@ -142,4 +143,5 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    
 }
