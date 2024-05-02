@@ -7,7 +7,7 @@ function Ticketpage() {
 
   // Funktion för att generera en unik kvittoid
   const generateReceiptId = () => {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const characters = 'LINUSARVIKA1337';
     const length = 5;
     let receiptId = '';
     for (let i = 0; i < length; i++) {
