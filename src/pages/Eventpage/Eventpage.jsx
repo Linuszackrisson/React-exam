@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEventStore } from '../../useStore';
+import { useEventStore } from '../../stores/useStore';
 import { useEffect } from 'react';
 import './eventpage.css';
 import { Link } from 'react-router-dom';

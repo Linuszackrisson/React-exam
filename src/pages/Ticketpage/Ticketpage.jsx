@@ -1,5 +1,5 @@
 import React from 'react';
-import { useOrderStore } from '../../orderStore';
+import { useOrderStore } from '../../stores/orderStore';
 import './ticketpage.css';
 
 function Ticketpage() {

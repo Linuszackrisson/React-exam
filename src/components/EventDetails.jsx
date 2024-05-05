@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useEventStore } from '../useStore';
-import { useTicketStore } from '../ticketStore'; 
+import { useEventStore } from '../stores/useStore';
+import { useTicketStore } from '../stores/ticketStore'; 
 import './eventdetails.css';
 
 function EventDetails() {

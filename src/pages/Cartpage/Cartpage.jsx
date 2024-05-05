@@ -1,6 +1,6 @@
 import React from 'react';
-import { useTicketStore } from '../../ticketStore'; 
-import { useOrderStore } from '../../orderStore'; 
+import { useTicketStore } from '../../stores/ticketStore'; 
+import { useOrderStore } from '../../stores/orderStore'; 
 import './cartpage.css';
 
 function Cartpage() {
@@ -40,6 +40,7 @@ function Cartpage() {
       </ul>
       {/* Visa det totala priset längst ned */}
       <div className="bottom-container">
+        
         <p className='prisText'>Totalt värde på order</p>
         <p className='prisTotal'>{totalPris} sek</p>
         {/* Använd handleSendOrder-funktionen när knappen klickas på */}
