@@ -1,6 +1,6 @@
 import React from 'react';
-import { useTicketStore } from '../../ticketStore'; // Importera ticketStore
-import { useOrderStore } from '../../orderStore'; // Importera orderStore
+import { useTicketStore } from '../../ticketStore'; 
+import { useOrderStore } from '../../orderStore'; 
 import './cartpage.css';
 
 function Cartpage() {
