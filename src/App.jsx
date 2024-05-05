@@ -2,7 +2,7 @@ import React from 'react'
 import Homepage from './pages/Homepage/Homepage'
 import Eventpage from './pages/Eventpage/Eventpage'
 import Nav from './components/Nav'
-import EventDetails from './components/EventDetails'
+import EventDetails from './components/Eventdetails/EventDetails'
 import Cartpage from './pages/Cartpage/Cartpage'
 import Ticketpage from './pages/Ticketpage/Ticketpage'
 
