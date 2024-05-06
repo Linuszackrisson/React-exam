@@ -102,3 +102,13 @@
     letter-spacing: 0.2rem;
 
 }
+
+.ticket-list {
+    overflow-y: hidden;
+    width: 100%; 
+  }
+  
+  .ticket-list > div {
+    width: 100%; 
+  }
+  
