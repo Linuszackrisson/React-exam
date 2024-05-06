@@ -1,10 +1,8 @@
 import { create } from 'zustand';
-//Vår andra CustomHook, denna för att hantera kundvagnen
-export const useTicketStore = create((set) => ({ 
-  cart: [],
 
-  // Funktionen för att lägga till biljetterna i kundvagnen, inkl en kontroll för att se om eventen redan finns eller ej.
-  // Om det skulle finnas, så adderas antalet biljetter av te.x Lasse Stefanz. Om inte, så skapar vi en ny rad som vanligt.
+export const useTicketStore = create((set) => ({
+  cart: [],
+  
   addToCart: (event, numberOfTickets) => set((state) => {
     const existingEventIndex = state.cart.findIndex(item => item.event.name === event.name);
     if (existingEventIndex !== -1) {
@@ -17,28 +15,47 @@ export const useTicketStore = create((set) => ({
       };
     }
   }),
- // Funktion för att öka antal biljetter i KUNDVAGNEN (så enbart sådana som har lagt tills)
+  
   increaseTickets: (index) => set((state) => {
     const updatedCart = [...state.cart];
     updatedCart[index].numberOfTickets += 1;
     return { cart: updatedCart };
   }),
-// Funktion för att minska antalet biljetter I KUNDVAGNEN
+  
   decreaseTickets: (index) => set((state) => {
     const updatedCart = [...state.cart];
     if (updatedCart[index].numberOfTickets > 1) {
       updatedCart[index].numberOfTickets -= 1;
     } else {
-      updatedCart.splice(index, 1); // Men om det enbart är en biljett, och vi sänker till "0" då ryker den helt från kundvagnen.
+      updatedCart.splice(index, 1);
     }
     return { cart: updatedCart };
   }),
- // Funktion för att ändra antalet biljetter för ett specifikt event i kundvagnen
+  
   handleChangeTickets: (index, value) => set((state) => {
     const updatedCart = [...state.cart];
     updatedCart[index].numberOfTickets = value;
     return { cart: updatedCart };
   }),
 
-  clearCart: () => set({ cart: [] }) // Vid köp så andropas denna funktion och vi tömmer kundvagnen.
+  clearCart: () => set({ cart: [] }),
+
+  // Uppdaterad funktion för att lägga till nya biljetter med samma sektion och plats i kundvagnen
+  addNewTicketsWithSameSectionAndSeat: (index) => set((state) => {
+    const updatedCart = [...state.cart];
+    const currentTicket = updatedCart[index];
+    const { event, numberOfTickets } = currentTicket;
+    const { section, seat } = event;
+
+    // Kolla om biljetterna är av samma event
+    const sameEventTickets = updatedCart.filter(item => item.event.name === event.name);
+    if (sameEventTickets.length === numberOfTickets) {
+      for (let i = 0; i < numberOfTickets; i++) {
+        const newTicket = { event: { ...event }, numberOfTickets: 1 }; // Skapar en kopia av eventobjektet för att undvika referensproblem
+        updatedCart.splice(index + i + 1, 0, newTicket);
+      }
+    }
+
+    return { cart: updatedCart };
+  })
 }));

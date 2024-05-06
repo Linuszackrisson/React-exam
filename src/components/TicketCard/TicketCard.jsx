@@ -1,13 +1,11 @@
-// TicketCard.js
 import React from 'react';
 
-function TicketCard({ order, ticketIndex, getRandomSection, generateReceiptId }) {
-  const section = getRandomSection();
-  const receiptId = generateReceiptId();
-  const seatNumber = 100 + ticketIndex;
+function TicketCard({ order, ticket }) {
+  const { section, seatNumber } = ticket;
+  const receiptId = order.receiptId;
 
   return (
-    <div className="ticket-card" key={`${order.index}-${ticketIndex}`}>
+    <div className="ticket-card">
       <p className='ticket-what'>WHAT</p>
       <h2>{order.event.name}</h2>
       <p className='ticket-what'>WHERE</p>
