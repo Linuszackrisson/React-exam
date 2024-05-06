@@ -13,7 +13,7 @@
     min-height: 667px;
     display: grid;
     align-items: center;
-
+    background: linear-gradient(to bottom, #E9659A, transparent);
 }
 
 .ticket-what {
