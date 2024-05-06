@@ -2,7 +2,7 @@
 
 ## Motivering för Val av Extra Hooks/Bibliotek
 
-### React Ikoner
+### React Icons
 
 Eftersom uppgiften var att skapa en mobilanpassad applikation och jag tidigt bestämde mig för att ha en fast botten navigeringsfält på sidan, var ett ikonbibliotek ett självklart val. Ikoner tar upp mindre utrymme och ger mer av en "mobilapp-vibb" enligt min åsikt. Dessutom är de extremt enkla att installera och använda.
 
