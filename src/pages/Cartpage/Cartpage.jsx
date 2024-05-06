@@ -1,31 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTicketStore } from '../../stores/ticketStore'; 
 import { useOrderStore } from '../../stores/orderStore'; 
 import './cartpage.css';
 import CartEventCard from '../../components//CartEventCard/CartEventCard';
 
 function Cartpage() {
-  // Vi hämtar varukorgen från vår customhook i ticketStore.js
   const { cart, increaseTickets, decreaseTickets, clearCart } = useTicketStore();
   const { addOrder } = useOrderStore();
+  const [orderStatus, setOrderStatus] = useState('');
 
-  // Beräkna det totala priset för alla biljetter
   const totalPris = cart.reduce((total, item) => total + (item.event.price * item.numberOfTickets), 0);
 
   const handleSendOrder = () => {
-   
-    cart.forEach(item => {
-      addOrder(item.event, item.numberOfTickets);
-    });
-
-    // Töm varukorgen
-    clearCart();
+    if (cart.length === 0) {
+      setOrderStatus('Din varukorg är tom!');
+    } else {
+      cart.forEach(item => {
+        addOrder(item.event, item.numberOfTickets);
+      });
+      clearCart();
+      setOrderStatus('Din order är skickad!');
+    }
   };
 
   return (
     <div className='cart-event-container'>
       <h1>Order</h1>
-      {/* Rendera varje evenemang i varukorgen */}
       <ul>
         {cart.map((item, index) => (
           <CartEventCard
@@ -37,11 +37,10 @@ function Cartpage() {
           />
         ))}
       </ul>
-      {}
       <div className="bottom-container">
         <p className='prisText'>Totalt värde på order</p>
         <p className='prisTotal'>{totalPris} sek</p>
-        {}
+        {orderStatus && <p className='prisText'>{orderStatus}</p>}
         <button className='sendOrderButton' onClick={handleSendOrder}>Skicka order</button>
       </div>
     </div>
