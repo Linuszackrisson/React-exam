@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useEventStore } from '../../stores/useStore';
 import { useTicketStore } from '../../stores/ticketStore'; 
 import './eventdetails.css';
-
+import { motion } from "framer-motion"
 function EventDetails() {
   const { eventId } = useParams();
   const { events } = useEventStore();
