@@ -1,0 +1,138 @@
+.event-card {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    max-height: 100px;
+    width: 100%;
+    padding-bottom: 1rem;
+    
+    margin: auto;    
+    
+    
+    
+    
+  }
+  
+  .event__left,
+  .event__middle,
+  .event__right {
+    flex: 1;
+  }
+  
+ 
+  .event__right {
+    max-width: 66px;
+  }
+  
+  .event__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FFFFFF;
+    max-width: 66px; /* Minsta bredd */
+    height: 66px; 
+    
+    
+   
+    border-radius: 5%;
+    margin: auto;
+
+     
+  }
+
+  .event__left p {
+    margin: 0;
+}
+
+    .event__name {
+    font-family: Fira Sans;
+    font-size: 22px;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-shadow: 1px 1px 0px #F56B9A;    
+    
+
+    
+
+    
+}
+.event__where {
+    font-family: Fira Sans;
+    font-size: 12px;
+    font-style: italic;
+    color: #FFFFFFCC;
+    
+    
+
+     
+}
+
+.event__middle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    
+    
+}
+.event__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #FFFFFF4D;
+    padding-bottom: 0.2rem;
+    
+    
+
+}
+
+.event__middle p {
+   margin: 0;
+   text-align: left;
+   
+}
+
+.event__time {
+    font-family: Fira Sans;
+    font-size: 14px;
+    color: #D0D0D0;
+    font-weight: 600;
+    
+
+}
+
+.event__price {
+    color:#37AEAB;
+    font-family: Fira Sans;
+    font-size: 17px;
+    font-weight: 600;
+
+    
+}
+
+.event__day {
+    font-family: Fira Sans;
+    font-size: 14px;
+    font-weight: 600;
+    
+     
+}
+
+.event__month {
+    font-family: Fira Sans;
+    font-size: 14px;
+    text-transform: uppercase;
+
+}
+
+.event-link {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    max-height: 100px;
+    width: 80%;
+    
+    margin: auto;
+    text-decoration: none;
+    color: inherit;
+}
