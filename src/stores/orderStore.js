@@ -9,8 +9,8 @@ export const useOrderStore = create((set) => ({
     const newOrder = {
       event,
       tickets: [],
-      section: generateRandomSection(), // Generera en slumpmässig sektion för hela ordern
-      receiptId: generateReceiptId() // Generera ett kvitto-ID för ordern
+      section: generateRandomSection(), 
+      receiptId: generateReceiptId() 
     };
 
     // Iterera genom antalet biljetter och skapa dem
@@ -36,7 +36,7 @@ const generateRandomSection = () => {
   return sections[Math.floor(Math.random() * sections.length)];
 };
 
-// Funktion för att generera ett kvitto-ID
+
 const generateReceiptId = () => {
   const characters = 'LINUSARVIKA1337';
   const length = 5;
