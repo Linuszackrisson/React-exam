@@ -8,12 +8,12 @@ function EventDetails() {
   const { eventId } = useParams();
   const { events } = useEventStore();
   const event = events[eventId];
-  const [numberOfTickets, setNumberOfTickets] = useState(1); // Här hanterar vi tillståndet temporärt för antalet biljetter, det blir globalt senare i processen.
-  const [totalPrice, setTotalPrice] = useState(event.price); // Samma som ovan, fast totalpriset.
+  const [numberOfTickets, setNumberOfTickets] = useState(1); 
+  const [totalPrice, setTotalPrice] = useState(event.price); 
 
-  const addToCart = useTicketStore(state => state.addToCart); // Hämta addToCart från ticketStore
+  const addToCart = useTicketStore(state => state.addToCart); 
 
-  useEffect(() => { // hook för att uppdatera totalpriset varje gång antalet biljetter ändras 
+  useEffect(() => {  
     setTotalPrice(event.price * numberOfTickets);
   }, [numberOfTickets]);
 
@@ -27,18 +27,11 @@ function EventDetails() {
     }
   };
 
-  const handleAddToCart = () => { // Funktion som lägger till event i kundvagnen OCH antal av denna (som vi kommer behöva senare, viktigt!)
-    addToCart(event, numberOfTickets); /* När "LÄGG i KUNDVAGN" knappen klickas anropas detta, så lägger vi alltså eventen och antalet i en NY global custom hook (KUNDVAGNEN) som 
-    importeras högst upp på rad fyra. Jämfört med om vi bara ökar och sänker biljetterna UTAN att confirma vårt köp, så är det "bara" en UseState som uppdateras..
-     
+  const handleAddToCart = () => { 
+    addToCart(event, numberOfTickets); 
 
-    
-
-    
-    
-    */
   };
-// Här nedan renderar vi allting, ingen speciellt att säga förutom att knapparna även kallas på vid klick här nedan.
+
   return (
     <div className='Event-details'>
       <h1>Event</h1>

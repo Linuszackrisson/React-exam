@@ -1,4 +1,4 @@
-// CartEventCard.js
+
 import React from 'react';
 import './carteventcard.css'
 

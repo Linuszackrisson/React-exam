@@ -2,9 +2,8 @@ import React from 'react';
 import logo from '../../assets/logo.png';
 import './homepage.css';
 import { motion } from "framer-motion";
-/* Här nedan är det mycket okänd kod som kan kännas skrämande,
-men det är bara animation. Jag använder mig av Framer-motion för att 
-få till enkla och väldigt tilltalande animationer*/
+
+
 function Homepage() {
   return (
     <div className='homepage-container'>

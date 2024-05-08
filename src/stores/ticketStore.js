@@ -40,14 +40,12 @@ export const useTicketStore = create((set) => ({
 
   clearCart: () => set({ cart: [] }),
 
-  // Uppdaterad funktion för att lägga till nya biljetter med samma sektion och plats i kundvagnen
   addNewTicketsWithSameSectionAndSeat: (index) => set((state) => {
     const updatedCart = [...state.cart];
     const currentTicket = updatedCart[index];
     const { event, numberOfTickets } = currentTicket;
     const { section, seat } = event;
 
-    // Kolla om biljetterna är av samma event
     const sameEventTickets = updatedCart.filter(item => item.event.name === event.name);
     if (sameEventTickets.length === numberOfTickets) {
       for (let i = 0; i < numberOfTickets; i++) {

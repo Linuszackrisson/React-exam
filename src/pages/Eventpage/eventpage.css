@@ -6,15 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* Tveksamt om du någonsin kommer navigera hit Jesper.
-    Gör du det, se detta som ett easter egg. Men jag har upplevt mig själv 
-    ganska bitig på CSS. Men det här jäkla sidan har av någon anledning
-    varit fruktansvärd, tog ett tag att lista ut hur jag skulle 
-    "DELA PÅ DATAN" från date. Siffror för sig och bokstäver för sig, 
-    genom att duplicera dom och substringa så klart.. Uuuh!
-    
-    
-    */
+ 
     
 }
 .event-title-container {

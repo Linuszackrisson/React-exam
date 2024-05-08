@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaHome, FaCalendarAlt, FaShoppingCart, FaTicketAlt } from 'react-icons/fa';
-// React Icons bilbioteket används här för VG-delen. Enkel installation och användning
+
 const Nav = () => {
   return (
     <nav>

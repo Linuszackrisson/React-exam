@@ -1,6 +1,6 @@
 import React from 'react';
 import { useOrderStore } from '../../stores/orderStore';
-import { motion } from 'framer-motion'; // Importera motion från framer-motion
+import { motion } from 'framer-motion'; 
 import TicketCard from '../../components/TicketCard/TicketCard';
 import './ticketpage.css';
 

@@ -13,15 +13,15 @@ export const useOrderStore = create((set) => ({
       receiptId: generateReceiptId() 
     };
 
-    // Iterera genom antalet biljetter och skapa dem
+    
     for (let i = 0; i < numberOfTickets; i++) {
-      // Skapa biljettobjektet
+      
       const ticket = {
-        section: newOrder.section, // Här inkluderar vi sektionsinformationen för varje biljett
-        seatNumber: 200 + i + 1 // Platsnummer, börjar från 1 och ökar med 1 för varje biljett
+        section: newOrder.section, 
+        seatNumber: 200 + i + 1 
       };
 
-      newOrder.tickets.push(ticket); // Lägg till biljetten i orderns biljettarray
+      newOrder.tickets.push(ticket); 
     }
 
     set((state) => ({
@@ -30,7 +30,7 @@ export const useOrderStore = create((set) => ({
   }
 }));
 
-// Funktion för att generera en slumpmässig sektion
+
 const generateRandomSection = () => {
   const sections = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
   return sections[Math.floor(Math.random() * sections.length)];

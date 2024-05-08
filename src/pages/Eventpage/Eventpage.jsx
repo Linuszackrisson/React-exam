@@ -28,7 +28,6 @@ export default function Eventpage() {
       transition: { delay: i * 0.1 }
     }));
   }, [events, controls]);
-// Animations med framer motion så listan "studsar in" på ett glatt sätt
   return (
     <div className='event-container'>
       <div className="event-title-container">
