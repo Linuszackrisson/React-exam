@@ -4,7 +4,7 @@
 
 ### React Icons
 
-Eftersom uppgiften var att skapa en mobilanpassad applikation och jag tidigt bestämde mig för att ha en fast botten navigeringsfält på sidan, var ett ikonbibliotek ett självklart val. Ikoner tar upp mindre utrymme och ger mer av en "mobilapp-vibb" enligt mig. Dessutom är de extremt enkla att installera och använda.
+Eftersom uppgiften var att skapa en mobilanpassad applikation och jag tidigt bestämde mig för att ha en fast i botten på sidan, var ett ikonbibliotek ett självklart val. Ikoner tar upp mindre utrymme och ger mer av en "mobilapp-vibb" enligt mig. Dessutom är de extremt enkla att installera och använda.
 
 Funktionaliteten är enkel: du installerar biblioteket och sedan importerar du ikonpaketet i den önskade komponenten och använder dem som vanliga komponenter.
 
