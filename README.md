@@ -18,7 +18,7 @@ För att använda Framer Motion importerar du `{ motion }` från "framer-motion"
 
 Sedan skriver du något som `animate initial={{ opacity: 0 }}` (det är osynligt när komponenten först "visas"), `animate={{ opacity: 1 }}` (tillståndet vi vill att den ska vara i), `transition={{ duration: 1 }}` (tiden det tar).
 
-Vad får vi ut av det? En smidig, enkel fade-in effekt.
+Vad får vi? En simpel fade in effekt, detta vara bara ett exempel dom jag använder mig i mitt projekt är något maffigare. 
 
 Det var ett simpelt exempel, men vad jag har förstått som är biblioteket ganska kraftfullt, absolut något jag kommer använda mig av i framtida projekt.
 
